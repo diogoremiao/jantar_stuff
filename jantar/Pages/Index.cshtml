@@ -31,7 +31,7 @@
             padding: 5%;
         }
 
-        #overlay {
+        #overlay1 {
             position: fixed;
             display: none;
             width: 100%;
@@ -45,6 +45,19 @@
             cursor: pointer;
         }
 
+        #overlay2 {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+            cursor: pointer;
+        }
 
 
         #text {
@@ -64,10 +77,16 @@
 
 
 
-    <div id="overlay" onclick="off()">
-        <img style="border-radius: 50%; max-width:60vw; max-height:100; width: 100%; height: auto; " src="https://i.pinimg.com/originals/a3/ca/5d/a3ca5d8f93fc2514e6e044275c678e8e.gif"/>
+    <div id="overlay1" onclick="off1()">
+        <img style="border-radius: 50%; max-width:60vw; max-height:100%; width: 100%; height: auto; " src="https://i.pinimg.com/originals/a3/ca/5d/a3ca5d8f93fc2514e6e044275c678e8e.gif" />
 
         <div style="font-family: 'Chalkduster'" id="text">YEY!</div>
+    </div>
+
+    <div id="overlay2" onclick="off2()">
+        <img style="border-radius: 50%; max-width:60vw; max-height:100%; width: 80%; height: auto; " src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/785e808d-e918-4754-b7c0-6bf4e5e95485/d8uwngs-0a2106b4-df71-4d92-9554-9f6c1fa2f287.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc4NWU4MDhkLWU5MTgtNDc1NC1iN2MwLTZiZjRlNWU5NTQ4NVwvZDh1d25ncy0wYTIxMDZiNC1kZjcxLTRkOTItOTU1NC05ZjZjMWZhMmYyODcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.4OjqHsz80bjz0f6L-hTgq2QOVZF8QGgofc6eEKqQlHo" />
+
+        <div style="font-family: 'Chalkduster'; color: black" id="text">NOT YEY!</div>
     </div>
 
 
@@ -86,18 +105,26 @@
     </div>
     <div class="container">
         <div class="center">
-            <button class="button-53" style="margin: 5px; margin-top: 40px; cursor: pointer" role="button" onclick="on()">Aceitar Convite</button>
-            <button class="button-54" style="margin: 5px; margin-top: 40px; cursor: pointer" role="button" onclick="on()">Cheiro Mal</button>
+            <button class="button-53" style="margin: 5px; margin-top: 40px; cursor: pointer" role="button" onclick="on1()">Aceitar Convite</button>
+            <button class="button-54" style="margin: 5px; margin-top: 40px; cursor: pointer" role="button" onclick="on2()">Cheiro Mal</button>
         </div>
     </div>
 
 
-    <script>function on() {
-            document.getElementById("overlay").style.display = "block";
+    <script>
+        function on1() {
+            document.getElementById("overlay1").style.display = "block";
         }
 
-        function off() {
-            document.getElementById("overlay").style.display = "none";
+        function off1() {
+            document.getElementById("overlay1").style.display = "none";
+        }
+        function on2() {
+            document.getElementById("overlay2").style.display = "block";
+        }
+
+        function off2() {
+            document.getElementById("overlay2").style.display = "none";
         }
     </script>
 
